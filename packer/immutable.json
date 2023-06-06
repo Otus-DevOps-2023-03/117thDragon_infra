@@ -2,7 +2,7 @@
     "builders": [
         {
             "type": "yandex",
-            "service_account_key_file": "/home/admins/secrets/key.json",
+            "service_account_key_file": "/packer/key.json",
             "folder_id": "b1gag46vnbtu9a80h7tc",
             "zone": "ru-central1-a",
             "subnet_id": "e9bm88jjcu3i4nhbqn46",
