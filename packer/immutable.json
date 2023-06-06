@@ -1,0 +1,31 @@
+{
+    "builders": [
+        {
+            "type": "yandex",
+            "service_account_key_file": "/home/admins/secrets/key.json",
+            "folder_id": "b1gag46vnbtu9a80h7tc",
+            "zone": "ru-central1-a",
+            "subnet_id": "e9bm88jjcu3i4nhbqn46",
+            "use_ipv4_nat": "true",
+            "image_description": "image for the otus exercises",
+            "disk_type": "network-hdd",
+            "source_image_family": "ubuntu-1604-lts",
+            "image_name": "reddit-full-{{timestamp}}",
+            "image_family": "reddit-full",
+            "ssh_username": "ubuntu",
+            "platform_id": "standard-v1"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "./files/puma.service",
+            "destination": "/tmp/puma.service"
+        },
+        {
+            "type": "shell",
+            "script": "./scripts/deploy_app.sh",
+            "execute_command": "sudo {{.Path}}"
+        }
+    ]
+}
