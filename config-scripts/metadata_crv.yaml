@@ -1,0 +1,11 @@
+#cloud-config
+
+users:
+  - name: yc-user
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLq+h1m2bQK9CnHoyHzQPr9KH3lDpErUe0tm+PlAOZWR+qnXf2yjvPigG7iDPwb4J/jkNGKKOG5JCB65kPprAOR+WmbA/FAmiGUNw/PiHXei7bYfrsyvN/SQUOjj8uDeORzScshCMYG3IECtQru4D9gNRXEOxgthvKx1UCWGwNnsByUleGK9Fg45Ambd0Bgs12TMNn9eQI/Gr81jhu8V7wdb0TIASGP2K1z2DZS1eogp0vtQnN9eck/4SjehO+slEt5nXvq9UNvh93TgPIqa6GbQLtKwaOPMxoGJTHEGrL5gnAI05mEv/FOCv5rR3k4mvatUM5dZLdMu2KJev9WapKwO6vEY4L5Rb4zyTYc5/wuPgl39WhKf97LtmTMTNAqgrUkFebrMmjuz7jHUibYscBb8TdLmxufaEoaGzoxvNc0d5fBOWcNetM1Iw4skkvI76m7tS2AW6FnwL9IpVZMI74MYlBwaqA6zoR/9cH8AxqBCNu7KV50+iGjTg96IMhgk0= appuser
+runcmd:
+  - ./deploy_crv.sh
