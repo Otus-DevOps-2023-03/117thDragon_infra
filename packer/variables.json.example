@@ -1,8 +1,4 @@
 {
-    "folder_id": "your_folder_id",
-    "source_image_id": "your_source_image_id",
-    "service_account_key_file_path": "./packer/files/key.json",
-    "source_image_family": "your_source_image_family",
-    "subnet_id": "your_subnet_id",
-    "zone": "ru-central1-a"
+    "project_id": "example",
+    "source_image_family": "reddit-full"
 }
